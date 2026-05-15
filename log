@@ -212,3 +212,15 @@ Fri May 15 07:14:36 PM UTC 2026:
  tests:  2|4
 ========================================
 4793530
+Fri May 15 07:20:54 PM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:51:46: error: ‘label’ undeclared (first use in this function); did you mean ‘label2’?
+   51 |     if (map_search(g->adjacencyMap, (void *) label) == NULL) return -1;
+      |                                              ^~~~~
+      |                                              label2
+graph.c:51:46: note: each undeclared identifier is reported only once for each function it appears in
+9877850
