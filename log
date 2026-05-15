@@ -114,3 +114,17 @@ Fri May 15 07:01:57 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 b8bbc1d
+Fri May 15 07:02:34 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:56:42: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   56 |         if (is_equal_string(aux->target, label2)) return aux->weight;
+      |                                          ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+48f6fd6
