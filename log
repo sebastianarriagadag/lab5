@@ -182,3 +182,21 @@ Fri May 15 07:12:48 PM UTC 2026:
  tests:  2|4
 ========================================
 7a08904
+Fri May 15 07:13:29 PM UTC 2026: 
+ graph.c | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:54:59: error: expected expression before ‘==’ token
+   54 |         if (is_equal_string(aux->target, (void *)label2)) == 0) return aux->weight;
+      |                                                           ^~
+graph.c:54:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   54 |         if (is_equal_string(aux->target, (void *)label2)) == 0) return aux->weight;
+      |         ^~
+graph.c:54:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |         if (is_equal_string(aux->target, (void *)label2)) == 0) return aux->weight;
+      |                                                               ^
+graph.c:54:63: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+21f2bc0
