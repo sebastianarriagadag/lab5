@@ -36,3 +36,21 @@ Fri May 15 06:49:05 PM UTC 2026:
  tests:  1|5
 ========================================
 c40d9d4
+Fri May 15 06:52:33 PM UTC 2026: 
+ graph.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:54:12: error: expected ‘(’ before ‘is_equal_string’
+   54 |         if is_equal_string(aux->target, label2) return aux->weight;
+      |            ^~~~~~~~~~~~~~~
+      |            (
+graph.c:54:41: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   54 |         if is_equal_string(aux->target, label2) return aux->weight;
+      |                                         ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+c120e75
