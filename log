@@ -162,3 +162,17 @@ Fri May 15 07:06:02 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 ed52b8d
+Fri May 15 07:11:57 PM UTC 2026: 
+ graph.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:46:5: error: unknown type name ‘mapPair’; did you mean ‘MapPair’?
+   46 |     mapPair *pair = map_search(g->adjacencyMap, (void *) label)->value;
+      |     ^~~~~~~
+      |     MapPair
+graph.c:47:34: error: returning ‘int *’ from a function with incompatible return type ‘List *’ [-Wincompatible-pointer-types]
+   47 |     return (pair == NULL) ? NULL : pair;
+      |            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+25f1b4c
