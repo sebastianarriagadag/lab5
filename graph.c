@@ -55,6 +55,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         puts("f"); //is_equal_string(aux->target, (void *)label2)
         if (strcmp(aux->target, label2) == 0) {
             puts("d");
+            return aux->weight;
         }
         aux = list_next(edges);
     }
