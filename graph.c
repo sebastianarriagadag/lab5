@@ -49,7 +49,7 @@ List* getEdges(Graph* g, const char* label) {
 int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
     List* edges = getEdges(g, label1);
-    if (!edges) return NULL;
+    if (!edges) return -1;
     Edge* aux = list_first(edges);
     while (aux != NULL) {
         if (is_equal_string((void *) aux->target, (void *) label2)) return aux->weight;
