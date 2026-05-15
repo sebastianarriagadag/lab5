@@ -74,3 +74,23 @@ Fri May 15 06:58:02 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4749d99
+Fri May 15 07:00:41 PM UTC 2026: 
+ graph.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:54:14: error: expected ‘;’ before ‘while’
+   54 |     puts("f")
+      |              ^
+      |              ;
+   55 |     while (aux != NULL) {
+      |     ~~~~~     
+graph.c:53:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   53 |     Edge* aux = list_first(edges);
+      |           ^~~
+graph.c:61:1: error: control reaches end of non-void function [-Werror=return-type]
+   61 | }
+      | ^
+cc1: all warnings being treated as errors
+412f182
