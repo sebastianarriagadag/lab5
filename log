@@ -6,3 +6,17 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Fri May 15 06:48:23 PM UTC 2026: 
+ graph.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:47:5: error: expected identifier or ‘(’ before ‘return’
+   47 |     return map_search(g->adjacencyMap, (void *) label);
+      |     ^~~~~~
+graph.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
+   48 | }
+      | ^
+cc1: all warnings being treated as errors
+d6ccab9
