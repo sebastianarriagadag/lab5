@@ -286,3 +286,16 @@ graph.c:39:5: error: ‘copiaLabel’ undeclared (first use in this function)
       |     ^~~~~~~~~~
 graph.c:39:5: note: each undeclared identifier is reported only once for each function it appears in
 31d5d31
+Sat May 16 09:31:19 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:38:69: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   38 |     if (map_search(g->adjacencyMap, (void *) label) != NULL) return NULL;
+      |                                                                     ^~~~
+graph.c:36:6: note: declared here
+   36 | void addNode(Graph* g, const char* label) {
+      |      ^~~~~~~
+a0840ee
