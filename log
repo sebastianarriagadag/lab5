@@ -236,3 +236,21 @@ Fri May 15 07:21:20 PM UTC 2026:
  tests:  2|4
 ========================================
 4bfe801
+Sat May 16 09:26:22 PM UTC 2026: 
+ graph.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:27: error: implicit declaration of function ‘create_map’; did you mean ‘createGraph’? [-Wimplicit-function-declaration]
+   32 |     nuevo->adjacencyMap = create_map(is_equal_string);
+      |                           ^~~~~~~~~~
+      |                           createGraph
+graph.c:32:25: error: assignment to ‘Map *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   32 |     nuevo->adjacencyMap = create_map(is_equal_string);
+      |                         ^
+graph.c: In function ‘getEdges’:
+graph.c:48:69: error: returning ‘int’ from a function with return type ‘List *’ makes pointer from integer without a cast [-Wint-conversion]
+   48 |     if (map_search(g->adjacencyMap, (void *) label) == NULL) return -1;
+      |                                                                     ^
+e55105d
