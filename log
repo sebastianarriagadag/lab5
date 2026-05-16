@@ -305,3 +305,14 @@ Sat May 16 09:31:30 PM UTC 2026:
  tests:  7|2
 ========================================
 75cfcb9
+Sat May 16 09:34:51 PM UTC 2026: 
+ graph.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:49:19: error: assignment discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   49 |     nuevo->target = dest;
+      |                   ^
+cc1: all warnings being treated as errors
+6efc289
